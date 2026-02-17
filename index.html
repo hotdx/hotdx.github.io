@@ -147,7 +147,7 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.15)' stroke-width='2'%3E%3Ccircle cx='80' cy='350' r='50'/%3E%3Ccircle cx='80' cy='350' r='90'/%3E%3Ccircle cx='80' cy='350' r='130'/%3E%3Ccircle cx='80' cy='350' r='170'/%3E%3Ccircle cx='80' cy='350' r='210'/%3E%3Ccircle cx='80' cy='350' r='250'/%3E%3Ccircle cx='720' cy='50' r='40'/%3E%3Ccircle cx='720' cy='50' r='80'/%3E%3Ccircle cx='720' cy='50' r='120'/%3E%3Ccircle cx='720' cy='50' r='160'/%3E%3Ccircle cx='720' cy='50' r='200'/%3E%3C/g%3E%3Cg fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1.5'%3E%3Cpath d='M0 180 Q100 120 200 180 T400 180 T600 180 T800 180'/%3E%3Cpath d='M0 220 Q100 280 200 220 T400 220 T600 220 T800 220'/%3E%3Cpath d='M0 200 Q100 150 200 200 T400 200 T600 200 T800 200'/%3E%3C/g%3E%3Cg fill='rgba(255,255,255,0.15)'%3E%3Ccircle cx='300' cy='100' r='3'/%3E%3Ccircle cx='500' cy='300' r='3'/%3E%3Ccircle cx='150' cy='150' r='2'/%3E%3Ccircle cx='650' cy='250' r='2'/%3E%3Ccircle cx='400' cy='60' r='2.5'/%3E%3Ccircle cx='250' cy='280' r='2'/%3E%3Ccircle cx='580' cy='120' r='2'/%3E%3C/g%3E%3C/svg%3E");
     background-size: cover;
     background-position: center;
-    animation: waveDrift 12s ease-in-out infinite;
+    animation: waveDrift 18s ease-in-out infinite;
   }
 
   @keyframes waveDrift {
@@ -284,6 +284,20 @@
   .section--teal .section-label { color: var(--accent-light); }
   .section--teal .section-title { color: #fff; }
   .section--teal p { color: rgba(255,255,255,0.75); }
+
+  .section--blue {
+    background: linear-gradient(135deg, #1565C0 0%, #1e88e5 50%, #2196F3 100%);
+    color: #fff;
+  }
+  .section--blue .section-title { color: #fff; }
+  .section--blue p { color: rgba(255,255,255,0.8); }
+  .section--blue .submit-btn {
+    background: #fff;
+    color: var(--accent);
+  }
+  .section--blue .submit-btn:hover {
+    background: rgba(255,255,255,0.85) !important;
+  }
 
   /* ── LETTER ── */
   .letter {
@@ -434,7 +448,7 @@
   }
 
   .dates-table tr {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
   }
 
   .dates-table td {
@@ -450,9 +464,10 @@
   }
 
   .dates-table td:last-child {
-    color: var(--accent-light);
+    color: #fff;
     font-family: var(--serif);
     font-size: 1.05rem;
+    font-weight: 600;
   }
 
   .submit-btn {
@@ -467,12 +482,11 @@
     font-weight: 600;
     font-size: 0.9rem;
     border-radius: 8px;
-    transition: background 0.2s, transform 0.15s;
+    transition: background 0.2s;
   }
 
   .submit-btn:hover {
-    background: var(--accent-light);
-    transform: translateY(-1px);
+    background: #4caf50 !important;
   }
 
   .submit-btn svg {
@@ -509,7 +523,7 @@
     width: 110px;
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--teal);
+    color: var(--accent);
     padding-top: 0.15rem;
   }
 
@@ -632,9 +646,9 @@
     transition: opacity 0.2s;
   }
 
-  .org-link:hover {
+  .organizer-card:hover .org-link,
+  .chair-item:hover .org-link {
     opacity: 0.6;
-    text-decoration: none;
   }
 
   .organizer-card p.org-bio {
@@ -675,7 +689,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--teal);
+    color: var(--accent);
     margin-bottom: 0.15rem;
   }
 
@@ -803,7 +817,7 @@
         <span>Co-located with <strong>ACM MobiCom 2026</strong></span>
       </div>
     </div>
-    <a href="https://hotdx2026.hotcrp.com" class="submit-btn" target="_blank" rel="noopener" style="margin-top:1.5rem;background:#2e7d32;">
+    <a href="https://hotdx2026.hotcrp.com" class="submit-btn" target="_blank" rel="noopener" style="margin-top:1.5rem;background:#43a047;">
       Submit Your Paper
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
     </a>
@@ -921,7 +935,7 @@
 </section>
 
 <!-- IMPORTANT DATES -->
-<section class="section section--teal" id="dates" style="padding-top:1.5rem;padding-bottom:1.5rem;">
+<section class="section section--blue" id="dates" style="padding-top:1.5rem;padding-bottom:1.5rem;">
   <div class="section-inner reveal">
     <!-- <div class="section-label">Important Dates</div> -->
     <h2 class="section-title">Key Deadlines</h2>
@@ -1039,7 +1053,7 @@
 </section>
 
 <!-- GRAND CHALLENGES -->
-<section class="section section--teal" id="challenges" style="padding-top:1.5rem;padding-bottom:1.5rem;">
+<section class="section section--blue" id="challenges" style="padding-top:1.5rem;padding-bottom:1.5rem;">
   <div class="section-inner reveal">
     <!-- <div class="section-label">Group Discussions</div> -->
     <h2 class="section-title">Grand Challenges</h2>
