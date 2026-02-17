@@ -143,10 +143,17 @@
   .hero::before {
     content: '';
     position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.07)' stroke-width='1.5'%3E%3C!-- signal arcs bottom-left --%3E%3Ccircle cx='100' cy='350' r='60'/%3E%3Ccircle cx='100' cy='350' r='100'/%3E%3Ccircle cx='100' cy='350' r='140'/%3E%3Ccircle cx='100' cy='350' r='180'/%3E%3Ccircle cx='100' cy='350' r='220'/%3E%3C!-- signal arcs top-right --%3E%3Ccircle cx='700' cy='50' r='50'/%3E%3Ccircle cx='700' cy='50' r='90'/%3E%3Ccircle cx='700' cy='50' r='130'/%3E%3Ccircle cx='700' cy='50' r='170'/%3E%3C!-- sine wave --%3E%3Cpath d='M0 200 Q50 160 100 200 T200 200 T300 200 T400 200 T500 200 T600 200 T700 200 T800 200' stroke='rgba(255,255,255,0.05)' stroke-width='2'/%3E%3Cpath d='M0 220 Q50 170 100 220 T200 220 T300 220 T400 220 T500 220 T600 220 T700 220 T800 220' stroke='rgba(255,255,255,0.04)' stroke-width='2'/%3E%3C!-- small dots --%3E%3Ccircle cx='300' cy='100' r='2' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='500' cy='300' r='2' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='150' cy='150' r='1.5' fill='rgba(255,255,255,0.08)'/%3E%3Ccircle cx='650' cy='250' r='1.5' fill='rgba(255,255,255,0.08)'/%3E%3Ccircle cx='400' cy='50' r='2' fill='rgba(255,255,255,0.06)'/%3E%3C/g%3E%3C/svg%3E");
+    inset: -20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.15)' stroke-width='2'%3E%3Ccircle cx='80' cy='350' r='50'/%3E%3Ccircle cx='80' cy='350' r='90'/%3E%3Ccircle cx='80' cy='350' r='130'/%3E%3Ccircle cx='80' cy='350' r='170'/%3E%3Ccircle cx='80' cy='350' r='210'/%3E%3Ccircle cx='80' cy='350' r='250'/%3E%3Ccircle cx='720' cy='50' r='40'/%3E%3Ccircle cx='720' cy='50' r='80'/%3E%3Ccircle cx='720' cy='50' r='120'/%3E%3Ccircle cx='720' cy='50' r='160'/%3E%3Ccircle cx='720' cy='50' r='200'/%3E%3C/g%3E%3Cg fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1.5'%3E%3Cpath d='M0 180 Q100 120 200 180 T400 180 T600 180 T800 180'/%3E%3Cpath d='M0 220 Q100 280 200 220 T400 220 T600 220 T800 220'/%3E%3Cpath d='M0 200 Q100 150 200 200 T400 200 T600 200 T800 200'/%3E%3C/g%3E%3Cg fill='rgba(255,255,255,0.15)'%3E%3Ccircle cx='300' cy='100' r='3'/%3E%3Ccircle cx='500' cy='300' r='3'/%3E%3Ccircle cx='150' cy='150' r='2'/%3E%3Ccircle cx='650' cy='250' r='2'/%3E%3Ccircle cx='400' cy='60' r='2.5'/%3E%3Ccircle cx='250' cy='280' r='2'/%3E%3Ccircle cx='580' cy='120' r='2'/%3E%3C/g%3E%3C/svg%3E");
     background-size: cover;
     background-position: center;
+    animation: waveDrift 12s ease-in-out infinite;
+  }
+
+  @keyframes waveDrift {
+    0% { transform: translate(-30px, 20px) scale(1); }
+    50% { transform: translate(30px, -20px) scale(1.08); }
+    100% { transform: translate(-30px, 20px) scale(1); }
   }
 
   .hero-content {
